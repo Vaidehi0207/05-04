@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Quiz Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Quiz Generator</h1>
+    <form id="quizForm">
+      <label for="topics">Select Topic(s):</label>
+      <select id="topics" multiple>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="English"></option>
+        <option value="Hindi"></option>
+        <!-- Add more topics as needed -->
+      </select><br><br>
+      
+      <label for="difficulty">Select Difficulty:</label>
+      <select id="difficulty">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select><br><br>
+
+      <label for="numQuestions">Number of Questions:</label>
+      <input type="number" id="numQuestions" min="1" max="10" value="5"><br><br>
+
+      <button type="submit">Generate Quiz</button>
+    </form>
+
+    <div id="quizContainer" style="display: none;">
+      <h2>Quiz Questions</h2>
+      <div id="questions"></div>
+      <button id="submitQuiz">Submit Quiz</button>
+    </div>
+
+    <div id="quizResult" style="display: none;">
+      <h2>Quiz Result</h2>
+      <p id="score"></p>
+      <div id="feedback"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
